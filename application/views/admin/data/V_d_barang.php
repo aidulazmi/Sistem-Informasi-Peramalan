@@ -39,14 +39,27 @@
                   </tr>
                   </thead>
                   <tbody>
+                    <?php $i=0; foreach($user as $u){ echo ''; $i++; ?>
                   <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
+                    <td><?php echo $i ?></td>
+                    <td><?php echo $u->kode_barang ?></td>
+                    <td><?php echo $u->nama_barang ?></td>
+                    <td>
+                     <a class="btn btn-info btn-sm" href="<?php echo site_url('C_admin/edit_barang/'.$u->id_barang);?>">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Ubah
+                      </a>
+                      <a class="btn btn-danger btn-sm" href="<?php echo site_url('C_admin/hapus_barang/'.$u->id_barang);?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')">
+                              <i class="fas fa-trash">
+                              </i>
+                              Hapus
+                      </a>
+                  
+                      
                     </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
                   </tr>
+                  <?php } ?>
                   </tbody>
                   <tfoot>
                   <tr>
