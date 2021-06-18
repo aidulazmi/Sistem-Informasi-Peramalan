@@ -36,7 +36,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="<?php echo site_url('C_admin/index')?>" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Home
@@ -51,9 +51,17 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('C_admin/inventory')?>" class="nav-link">
+              <i class="nav-icon fas fa-store-alt"></i>
+              <p>
+                Stock Barang
+              </p>
+            </a>
+          </li>
           
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="<?php echo site_url('C_admin/user')?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data User
