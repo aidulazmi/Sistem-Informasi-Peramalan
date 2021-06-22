@@ -68,6 +68,7 @@
 						<input type="submit" name="Simpan" value="Simpan"> 
 					</div>	
 				</form>
+				<a href="<?php echo site_url('C_login/logout')?>"><button>Logout</button></a>
 			</div> 
 		</div>	
 	</div>	
