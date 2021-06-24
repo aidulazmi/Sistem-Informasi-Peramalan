@@ -45,18 +45,11 @@
                     <td><?php echo $u->kode_barang ?></td>
                     <td><?php echo $u->nama_barang ?></td>
                     <td>
-                     <!-- <a class="btn btn-info btn-sm" href="<?php echo site_url('C_admin/edit_barang/'.$u->id_barang);?>">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Ubah
-                      </a>
-                      <a class="btn btn-danger btn-sm" href="<?php echo site_url('C_admin/hapus_barang/'.$u->id_barang);?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')">
-                              <i class="fas fa-trash">
-                              </i>
-                              Hapus
+                      <!-- <a class="btn btn-success btn-sm" href="<?php echo site_url('C_karyawan/cetak_gaji/'.$u->id_gaji);?>" target="_blank">
+                      <i class="fas fa-print">
+                      </i>
+                      Print
                       </a> -->
-                  
-                      
                     </td>
                   </tr>
                   <?php } ?>
