@@ -2,13 +2,6 @@
 
 class M_owner extends CI_Model{
 
-protected $table = "barang";
-
-  function __construct() {
-      parent::__construct( $this->table );
-      parent::set_join_key( 'id_barang' );
-  }
-
 //barang
 	function tampil_data_barang(){
 		return $this->db->get('barang');
@@ -41,4 +34,5 @@ protected $table = "barang";
       $this->order_by($this->table.'.id_barang', 'asc');
       return $this->fetch_data();
   }
+
 }

@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_owner extends CI_Controller {
 
+	private $services = null;
+    private $name = null;
+    private $parent_page = 'owner';
+	private $current_page = 'owner/data/';
+	
 		public function __construct()
     {
         parent::__construct();
@@ -61,35 +66,5 @@ class C_owner extends CI_Controller {
 
 		
 	}
-
-		public function trend_projection(  )
-	{
-
-			$product_id = $this->input->get( 'id_barang' );
-			$start_month = $this->input->get( 'start_month' );
-			$end_month = $this->input->get( 'end_month' );
-			$start_year = $this->input->get( 'start_year' );
-			$end_year = $this->input->get( 'end_year' );
-
-			$end_month_2 = $this->input->get( 'end_month_2' );
-			$end_year_2 = $this->input->get( 'end_year_2' );
-
-			$product = $this->M_owner->product( $product_id )->row();
-
-
-			$timestamp_1 = strtotime( $end_year."-".$end_month."-20" );
-			$timestamp_2 = strtotime( $end_year_2."-".$end_month_2."-20" );
-
-			$start_date = $start_year."-".$start_month."-1";
-			$end_date 	= $end_year."-".$end_month."-20";
-
-			if( $timestamp_1 >= $timestamp_2 )
-			{
-				$this->session->set_flashdata('alert', $this->alert->set_alert( Alert::DANGER, "Data Kosong / Inputan Tidak Valid !" ) );
-				redirect('C_owner/peramalan')  );
-			}
-
-	}
-
 
 }
