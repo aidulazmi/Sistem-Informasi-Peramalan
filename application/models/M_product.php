@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_product extends MY_Model
 {
-  protected $table = "product";
+  protected $table = "barang";
 
   function __construct() {
       parent::__construct( $this->table );
-      parent::set_join_key( 'product_id' );
+      parent::set_join_key( 'id_barang' );
   }
 
   /**
@@ -101,15 +101,15 @@ class M_product extends MY_Model
    * @return static
    * @author madukubah 
    */
-  public function product( $id = NULL  )
+  public function product( $id_barang = NULL  )
   {
-      if (isset($id))
+      if (isset($id_barang))
       {
-        $this->where($this->table.'.id', $id);
+        $this->where($this->table.'.id_barang', $id_barang);
       }
 
       $this->limit(1);
-      $this->order_by($this->table.'.id', 'desc');
+      $this->order_by($this->table.'.id_barang', 'desc');
 
       $this->products(  );
 
@@ -139,7 +139,7 @@ class M_product extends MY_Model
   public function products(  )
   {
       
-      $this->order_by($this->table.'.id', 'asc');
+      $this->order_by($this->table.'.id_barang', 'asc');
       return $this->fetch_data();
   }
 

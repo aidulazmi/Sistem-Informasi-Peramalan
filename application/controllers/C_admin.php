@@ -88,6 +88,7 @@ public function inventory()
 		//$id_barang = $this->input->post('id_barang');
 		$nama_barang = $this->input->post('nama_barang');
 		$kode_barang = $this->input->post('kode_barang');
+		$stock = $this->input->post('stock');
 
 
 		$data = array(
@@ -95,6 +96,7 @@ public function inventory()
 			//'id_barang' => $id_barang,
 			'nama_barang' => $nama_barang,
 			'kode_barang' => $kode_barang,
+			'stock' => $stock,
 			);
 		$this->M_admin->input_data_barang($data,'barang');
 		redirect('C_admin/barang');
@@ -302,11 +304,13 @@ function edit_inventory($id_inventory){
 		$id_barang = $this->input->post('id_barang');
 		$nama_barang = $this->input->post('nama_barang');
 		$kode_barang = $this->input->post('kode_barang');
+		$stock = $this->input->post('stock');
 
 		$data = array(
 			//'id_barang' => $id_barang,
 			'nama_barang' => $nama_barang,
-			'kode_barang' => $kode_barang
+			'kode_barang' => $kode_barang,
+			'stock' => $stock
 			);
 
 	$where = array(

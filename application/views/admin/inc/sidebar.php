@@ -28,7 +28,7 @@
           <img src="<?=base_url();?>/asset/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?php echo $this->session->userdata('username')?></a>
         </div>
       </div>
 
@@ -60,14 +60,14 @@
             </a>
           </li>
           
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?php echo site_url('C_admin/user')?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data User
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-header">Control</li>
           <li class="nav-item">
             <a href="<?php echo site_url('C_login/logout')?>" class="nav-link">

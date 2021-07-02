@@ -52,14 +52,39 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="<?php echo site_url('C_owner/inventory')?>" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Data Pembelian Barang
+              </p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="<?php echo site_url('C_owner/penjualan')?>" class="nav-link">
+              <i class="nav-icon fab fa-shopify"></i>
+              <p>
+                Data Penjualan
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
             <a href="<?php echo site_url('C_owner/peramalan')?>" class="nav-link">
-              <i class="nav-icon fas fa-store-alt"></i>
+              <i class="nav-icon fas fa-chart-line"></i>
               <p>
                 Ramalan
               </p>
             </a>
           </li>
-          
+          <li class="nav-header">Management User</li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('C_owner/user')?>" class="nav-link">
+              <i class="nav-icon fas fa-user-friends"></i>
+              <p>
+                User
+              </p>
+            </a>
+          </li>
           <li class="nav-header">Control</li>
           <li class="nav-item">
             <a href="<?php echo site_url('C_login/logout')?>" class="nav-link">

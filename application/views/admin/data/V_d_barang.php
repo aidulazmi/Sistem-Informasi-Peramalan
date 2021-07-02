@@ -35,6 +35,7 @@
                     <th>No</th>
                     <th>Kode Barang</th>
                     <th>Nama Barang</th>
+                    <th>Stock</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -44,6 +45,7 @@
                     <td><?php echo $i ?></td>
                     <td><?php echo $u->kode_barang ?></td>
                     <td><?php echo $u->nama_barang ?></td>
+                    <td><?php echo $u->stock ?></td>
                     <td>
                      <a class="btn btn-info btn-sm" href="<?php echo site_url('C_admin/edit_barang/'.$u->id_barang);?>">
                               <i class="fas fa-pencil-alt">
@@ -66,6 +68,7 @@
                     <th>No</th>
                     <th>Kode Barang</th>
                     <th>Nama Barang</th>
+                    <th>Stock</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>
@@ -105,6 +108,10 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nama Barang</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama Barang" name="nama_barang" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Jumlah Stock</label>
+                    <input type="text" class="form-control" onkeyup="sum();" onkeypress="return event.charCode >= 48 && event.charCode <=57" id="exampleInputEmail1" placeholder="Masukkan Nama Barang" name="stock" required>
                   </div>
                 </div>
                 <!-- /.card-body -->

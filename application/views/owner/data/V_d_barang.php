@@ -35,7 +35,7 @@
                     <th>No</th>
                     <th>Kode Barang</th>
                     <th>Nama Barang</th>
-                    <th>Action</th>
+                    <th>Stock</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -44,13 +44,7 @@
                     <td><?php echo $i ?></td>
                     <td><?php echo $u->kode_barang ?></td>
                     <td><?php echo $u->nama_barang ?></td>
-                    <td>
-                      <!-- <a class="btn btn-success btn-sm" href="<?php echo site_url('C_karyawan/cetak_gaji/'.$u->id_gaji);?>" target="_blank">
-                      <i class="fas fa-print">
-                      </i>
-                      Print
-                      </a> -->
-                    </td>
+                    <td><?php echo $u->stock ?></td>
                   </tr>
                   <?php } ?>
                   </tbody>
@@ -59,7 +53,7 @@
                     <th>No</th>
                     <th>Kode Barang</th>
                     <th>Nama Barang</th>
-                    <th>Action</th>
+                    <th>Stock</th>
                   </tr>
                   </tfoot>
                 </table>

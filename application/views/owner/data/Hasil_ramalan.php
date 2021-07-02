@@ -82,38 +82,35 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
+                 <h3>Hasil</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Variabel</th>
-                    <th>Rumus</th>
-                    <th>J</th>
-                    <th>To </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                    
-                  <tr>
-                    <th>Variabel</th>
-                    <th>Rumus</th>
-                    <th>j</th>
-                    <th>To </th>
-                    </td>
-                  </tr>
-
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Variabel</th>
-                    <th>Rumus</th>
-                    <th>j</th>
-                    <th>To </th>
-
-                  </tr>
-                  </tfoot>
+                   <tr>
+                            <td><b>x</b></td>
+                            <td>x</td>
+                            <td><?php echo $result->next_x ?></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td><b>a</b></td>
+                            <td> &Sigma;y / n </td>
+                            <td><?php echo $result->_y." / ". $_n ?></td>
+                            <td><?php echo $result->_y / $_n ?></td>
+                          </tr>
+                          <tr>
+                            <td><b>b</b></td>
+                            <td> &Sigma;xy / &Sigma;x^2 </td>
+                            <td><?php echo $result->_xy ." / ". $result->_xx?></td>
+                            <td><?php echo $result->_xy / $result->_xx?></td>
+                          </tr>
+                          <tr>
+                            <td><b>y`</b></td>
+                            <td> a + b(x)</td>
+                            <td><?php echo ( $result->_y / $_n ) ." + ". ( $result->_xy / $result->_xx ) . " * " . $result->next_x  ?></td>
+                            <td><?php echo $_y_accent = ( $result->_y / $_n ) + ( $result->_xy / $result->_xx * $result->next_x ) ?></td>
+                          </tr>
                 </table>
               </div>
               <!-- /.card-body -->
@@ -125,4 +122,14 @@
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
+      <textarea style="display:none" id="data_real" >
+        <?php echo json_encode( $data_real) ; ?>
+</textarea>
+<textarea style="display:none" id="data_x" >
+        <?php echo json_encode( $data_x) ; ?>
+</textarea>
+
+<textarea style="display:none" id="data_prediction" >
+        <?php echo json_encode( $data_prediction) ; ?>
+</textarea>
     </section>

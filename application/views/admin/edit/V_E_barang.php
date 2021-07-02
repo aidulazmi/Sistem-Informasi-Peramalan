@@ -50,6 +50,10 @@
                     <label for="exampleInputEmail1">Nama Barang</label>
                     <input type="text" class="form-control" value="<?php echo $u->nama_barang ?>" id="exampleInputEmail1" placeholder="Masukkan Nama Barang" name="nama_barang" required>
                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Jumlah Stock</label>
+                    <input type="text" class="form-control" value="<?php echo $u->stock?>" onkeyup="sum();" onkeypress="return event.charCode >= 48 && event.charCode <=57" id="exampleInputEmail1" placeholder="Masukkan Nama Barang" name="stock" required>
+                  </div>
                 </div>
 
                 <!-- /.card-body -->

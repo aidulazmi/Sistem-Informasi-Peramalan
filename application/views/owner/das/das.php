@@ -66,7 +66,7 @@
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>53<sup style="font-size: 20px">%</sup></h3>
-                <p>DATA USER</p>
+                <p>DATA Barang</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -74,30 +74,28 @@
               <a href="#" class="small-box-footer">Info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-success">
               <div class="inner">
-                <h3>44</h3>
-                <p>CETAK LAPORAN BARANG</p>
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <p>Penjualan</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-stats-bars"></i>
               </div>
               <a href="#" class="small-box-footer">Info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>65</h3>
-                <p>CETAK USER</p>
+                <p>Pembelian</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="fas fa-shopping-cart"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>

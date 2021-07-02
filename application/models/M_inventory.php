@@ -221,23 +221,23 @@ class M_inventory extends MY_Model
   public function get_inventories_prediction( $product_id, $start_date, $end_date )
   {
       $this->select( $this->table.'.*');
-      $this->select( 'product.name as product_name');
-      $this->select( 'inventory.quantity as _y');
+      $this->select( 'barang.nama_barang as product_name');
+      $this->select( 'inventory.stock as _y');
       $this->select( '0 as _x');
       $this->select( '0 as _xx');
       $this->select( '0 as _xy');
       $this->join( 
-        'product',
-        'product.id = inventory.product_id',
+        'barang',
+        'barang.id_barang = inventory.id_barang',
         'inner'
       );
       // $this->where( $this->table.'.month >= ', $start_month);
       // $this->where( $this->table.'.month <= ', $end_month);
-      $this->where( $this->table.'.product_id', $product_id);
+      $this->where( $this->table.'.id_barang', $product_id);
 
-      $this->where( $this->table.'.date BETWEEN "'.$start_date.'" AND "'.$end_date.'" ', "");
+      $this->where( $this->table.'.tanggal BETWEEN "'.$start_date.'" AND "'.$end_date.'" ', "");
       // $this->order_by($this->table.'.id', 'asc');
-      $this->order_by( "inventory.year asc , inventory.month asc", "");
+      $this->order_by( "inventory.tahun asc , inventory.bulan asc", "");
       return $this->fetch_data();
   }
 

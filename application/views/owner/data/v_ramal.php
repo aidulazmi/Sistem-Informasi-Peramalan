@@ -33,7 +33,7 @@
                   
                   <div class="form-group">
                         <label>Nama Barang</label>
-                        <select class="form-control" name="produk">
+                        <select class="form-control" name="id_barang">
                           <?php                                
                               foreach ($user as $row) {  
                               echo "<option value='".$row->id_barang."'>".$row->nama_barang."</option>";
